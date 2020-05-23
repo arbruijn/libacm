@@ -811,8 +811,8 @@ int acm_open_decoder(ACMStream **res, void *arg, acm_io_callbacks io_cb, int for
 	 */
 	if (force_chans > 0)
 		acm->info.channels = force_chans;
-	else if (!acm->wavc_file && acm->info.channels < 2)
-		acm->info.channels = 2;
+	//else if (!acm->wavc_file && acm->info.channels < 2)
+	//	acm->info.channels = 2;
 
 	/* calculate blocks */
 	acm->info.acm_cols = 1 << acm->info.acm_level;
